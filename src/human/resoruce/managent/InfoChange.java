@@ -355,7 +355,7 @@ public class InfoChange extends javax.swing.JFrame {
         //update info in mysql
         void change(){
             try {
-                sql="update person set name ='"+name+"',phone ='"+phone+"',position ='"+position+"',salary ="+salary+",skill ='"+skill+"',city ='"+city+"',workyear ="+year+",experience ='"+experience+"'";
+                sql="update person set name ='"+name+"',phone ='"+phone+"',position ='"+position+"',salary ="+salary+",skill ='"+skill+"',city ='"+city+"',workyear ="+year+",experience ='"+experience+"'"+" where username ='"+username+"'";
                 db=new DbConnect(sql);
                 db.pst.executeUpdate(sql);			
                 db.close();
